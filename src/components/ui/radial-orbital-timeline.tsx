@@ -33,6 +33,7 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
   const [autoRotate, setAutoRotate] = useState<boolean>(true);
   const [pulseEffect, setPulseEffect] = useState<Record<number, boolean>>({});
   const [activeNodeId, setActiveNodeId] = useState<number | null>(null);
+  const [hasMounted, setHasMounted] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const orbitRef = useRef<HTMLDivElement>(null);
@@ -113,6 +114,10 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
   };
 
   useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  useEffect(() => {
     let rotationTimer: NodeJS.Timeout;
 
     if (autoRotate && viewMode === "orbital") {
@@ -133,7 +138,15 @@ export default function RadialOrbitalTimeline({ timelineData }: RadialOrbitalTim
 
   const calculateNodePosition = (index: number, total: number) => {
     const angle = ((index / total) * 360 + rotationAngle) % 360;
-    const radius = typeof window !== 'undefined' && window.innerWidth < 768 ? 140 : 200;
+    
+    // Default radius for SSR and first client render
+    let radius = 200;
+    
+    // Update radius based on width only after mounting to avoid hydration mismatch
+    if (hasMounted && typeof window !== 'undefined') {
+      radius = window.innerWidth < 768 ? 140 : 200;
+    }
+    
     const radian = (angle * Math.PI) / 180;
 
     const x = Number((radius * Math.cos(radian)).toFixed(3));

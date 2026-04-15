@@ -180,7 +180,7 @@ const impactStats = [
 
 // Team members
 const teamMembers = [
-  { name: "Dr. Meera Patel", role: "Founder & Chairperson", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" },
+  { name: "Nayan Mali", role: "Founder & Chairperson", image: "/nayan.webp" },
   { name: "Rajiv Sharma", role: "Executive Director", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" },
   { name: "Priya Nair", role: "Program Director", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" },
   { name: "Amit Verma", role: "Finance Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
@@ -300,7 +300,7 @@ function AboutSection() {
               12+ Years of <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-green-400">Creating Change</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Azad Zindagi Foundation is a registered non-profit organization dedicated to protecting children's rights,
+              Azad Zindagi Foundation is a registered non-profit organization dedicated to protecting children&apos;s rights,
               providing quality education, and empowering communities across India.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
@@ -331,15 +331,17 @@ function AboutSection() {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80"
                 alt="Children learning"
+                width={800}
+                height={500}
                 className="w-full h-[300px] md:h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-foreground font-semibold text-lg">Education for All</p>
-                <p className="text-foreground/60 text-sm">Our flagship program since 2016</p>
+                <p className="text-white font-semibold text-lg">Education for All</p>
+                <p className="text-white/60 text-sm">Our flagship program since 2016</p>
               </div>
             </div>
           </motion.div>
@@ -543,9 +545,11 @@ function TeamSection() {
               className="text-center group"
             >
               <div className="relative mb-4 rounded-2xl overflow-hidden">
-                <img
+                <Image
                   src={member.image}
                   alt={member.name}
+                  width={400}
+                  height={400}
                   className="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -593,9 +597,11 @@ function BlogSection() {
             >
               <Card className="bg-zinc-900/50 border-border overflow-hidden group hover:border-orange-500/30 transition-all">
                 <div className="relative overflow-hidden">
-                  <img
+                  <Image
                     src={post.image}
                     alt={post.title}
+                    width={600}
+                    height={400}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4">
