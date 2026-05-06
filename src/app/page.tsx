@@ -206,7 +206,7 @@ const blogPosts = [
     title: "Women Who Lead: Success Stories",
     excerpt: "Inspiring stories of women who transformed their lives through our programs...",
     date: "Mar 28, 2026",
-    image: "https://images.unsplash.com/photo-1573167507397-4a47b2b930a0?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&q=80",
     category: "Empowerment"
   }
 ];
@@ -330,13 +330,13 @@ function AboutSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden">
+            <div className="relative rounded-2xl overflow-hidden h-[300px] md:h-[500px]">
               <Image
                 src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80"
                 alt="Children learning"
-                width={800}
-                height={500}
-                className="w-full h-[300px] md:h-[500px] object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
