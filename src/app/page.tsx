@@ -283,7 +283,7 @@ function AboutSection() {
   const opacity = useTransform(scrollY, [0, 600], [1, 0]);
 
   return (
-    <section id="about" className="relative py-24 bg-gradient-to-b from-black via-zinc-900 to-black overflow-hidden">
+    <section id="about" className="relative py-24 bg-background overflow-hidden">
       {/* Parallax Background */}
       <motion.div
         style={{ y, opacity }}
@@ -387,7 +387,7 @@ function ProgramsSection() {
               viewport={{ once: false }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="bg-zinc-900/50 border-border hover:border-orange-500/30 transition-all duration-300 group">
+              <Card className="bg-card border-border hover:border-orange-500/30 transition-all duration-300 group">
                 <CardHeader>
                   <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${program.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <program.icon className="w-7 h-7 text-foreground" />
@@ -433,7 +433,7 @@ function ImpactSection() {
           <Badge className="mb-4 bg-orange-500/20 text-orange-400 border-orange-500/30">
             Our Impact
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Transforming <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-green-400">Lives</span>
           </h2>
         </motion.div>
@@ -449,10 +449,10 @@ function ImpactSection() {
               className="text-center"
             >
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500 to-green-500 flex items-center justify-center">
-                <stat.icon className="w-8 h-8 text-foreground" />
+                <stat.icon className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">{stat.number}</div>
-              <div className="text-muted-foreground">{stat.label}</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
+              <div className="text-white/70">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -481,7 +481,7 @@ function TestimonialsSection() {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-black via-zinc-900 to-black overflow-hidden">
+    <section className="py-24 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -572,7 +572,7 @@ function TeamSection() {
 // Blog Section
 function BlogSection() {
   return (
-    <section id="blog" className="py-24 bg-gradient-to-b from-black via-zinc-900 to-black">
+    <section id="blog" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -600,7 +600,7 @@ function BlogSection() {
               viewport={{ once: false }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="bg-zinc-900/50 border-border overflow-hidden group hover:border-orange-500/30 transition-all">
+              <Card className="bg-card border-border overflow-hidden group hover:border-orange-500/30 transition-all">
                 <div className="relative overflow-hidden">
                   <Image
                     src={post.image}
