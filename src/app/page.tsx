@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Heart,
   Shield,
@@ -240,9 +241,11 @@ function Navigation() {
             <a href="#impact" className="text-sm text-foreground/80 hover:text-foreground transition-colors font-medium">Impact</a>
             <a href="#team" className="text-sm text-foreground/80 hover:text-foreground transition-colors font-medium">Team</a>
             <a href="#blog" className="text-sm text-foreground/80 hover:text-foreground transition-colors font-medium">Blog</a>
-            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
-              Donate Now
-            </Button>
+            <Link href="/donate">
+              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
+                Donate Now
+              </Button>
+            </Link>
             <ThemeToggle />
           </div>
 
@@ -260,7 +263,9 @@ function Navigation() {
             <a href="#impact" className="block text-foreground/80 hover:text-foreground font-medium text-lg">Impact</a>
             <a href="#team" className="block text-foreground/80 hover:text-foreground font-medium text-lg">Team</a>
             <a href="#blog" className="block text-foreground/80 hover:text-foreground font-medium text-lg">Blog</a>
-            <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 h-12 text-lg">Donate Now</Button>
+            <Link href="/donate" className="w-full">
+              <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 h-12 text-lg">Donate Now</Button>
+            </Link>
             <div className="flex justify-center pt-2">
               <ThemeToggle />
             </div>
@@ -656,12 +661,14 @@ function DonateCTA() {
             underprivileged children and communities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-orange-600 hover:bg-zinc-100 font-semibold px-8 py-6 text-lg"
-            >
-              Donate Now <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+            <Link href="/donate">
+              <Button
+                size="lg"
+                className="bg-white text-orange-600 hover:bg-zinc-100 font-semibold px-8 py-6 text-lg"
+              >
+                Donate Now <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"

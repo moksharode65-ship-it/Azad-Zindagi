@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Phone, Shield, Users, MapPin } from "lucide-react";
 
 const PARTNERS = [
@@ -20,7 +21,7 @@ const StatItem = ({ value, label }: { value: string; label: string }) => (
   </div>
 );
 
-export default function HeroSection({ onDonate }: { onDonate?: () => void }) {
+export default function HeroSection() {
   return (
     <div className="relative w-full bg-background text-foreground overflow-hidden font-sans min-h-screen transition-colors duration-500">
       <div className="absolute inset-0 z-0 bg-[url(https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&q=80)] bg-cover bg-center opacity-20 dark:opacity-25" />
@@ -71,13 +72,13 @@ export default function HeroSection({ onDonate }: { onDonate?: () => void }) {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={onDonate}
+              <Link
+                href="/donate"
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-orange-500/20 active:scale-95"
               >
                 Donate Now
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </button>
+              </Link>
 
               <a
                 href="#programs"
