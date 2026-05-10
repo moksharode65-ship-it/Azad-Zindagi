@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Heart, Shield, Award, ArrowLeft, ArrowRight, CheckCircle2,
   XCircle, Loader2, User, Mail, Phone, MessageSquare, Lock,
-  Sparkles, Users, BookOpen, Star
+  Sparkles, Users, BookOpen, Star, CreditCard, Smartphone, Building, Wallet
 } from "lucide-react";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -377,6 +377,43 @@ export default function DonatePage() {
                     />
                   </div>
                 </div>
+              </div>
+
+              {/* Step 3: Payment Method Info */}
+              <div className="rounded-2xl border border-white/8 bg-zinc-900/60 backdrop-blur-sm p-6">
+                <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                  <span className="w-6 h-6 rounded-full bg-orange-500 text-white text-xs flex items-center justify-center font-bold">3</span>
+                  Payment Method
+                </h2>
+                <div className="grid grid-cols-2 gap-3 mb-2">
+                  <div className="flex items-center gap-3 p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                    <div className="w-8 h-8 rounded bg-green-500/20 text-green-400 flex items-center justify-center">
+                      <Smartphone className="w-4 h-4" />
+                    </div>
+                    <span className="text-sm font-medium text-white">UPI / GPay / PhonePe</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                    <div className="w-8 h-8 rounded bg-blue-500/20 text-blue-400 flex items-center justify-center">
+                      <CreditCard className="w-4 h-4" />
+                    </div>
+                    <span className="text-sm font-medium text-white">Credit & Debit Cards</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                    <div className="w-8 h-8 rounded bg-purple-500/20 text-purple-400 flex items-center justify-center">
+                      <Building className="w-4 h-4" />
+                    </div>
+                    <span className="text-sm font-medium text-white">Netbanking</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-colors">
+                    <div className="w-8 h-8 rounded bg-orange-500/20 text-orange-400 flex items-center justify-center">
+                      <Wallet className="w-4 h-4" />
+                    </div>
+                    <span className="text-sm font-medium text-white">Wallets</span>
+                  </div>
+                </div>
+                <p className="text-xs text-zinc-500 mt-4 text-center">
+                  You will be securely redirected to Razorpay to choose your payment method and complete the transaction.
+                </p>
               </div>
 
               {/* Error */}
