@@ -652,11 +652,11 @@ function DonateCTA() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: false }}
         >
-          <Heart className="w-16 h-16 text-foreground mx-auto mb-6 animate-pulse" />
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <Heart className="w-16 h-16 text-white mx-auto mb-6 animate-pulse" />
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Your Support Can Change Lives
           </h2>
-          <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Every donation, no matter how small, makes a real difference in the lives of
             underprivileged children and communities.
           </p>
@@ -672,12 +672,12 @@ function DonateCTA() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-foreground hover:bg-white/10 font-semibold px-8 py-6 text-lg"
+              className="border-white text-white hover:bg-white/10 font-semibold px-8 py-6 text-lg"
             >
               Become a Partner
             </Button>
           </div>
-          <p className="text-foreground/70 text-sm mt-6">
+          <p className="text-white/70 text-sm mt-6">
             All donations are 100% tax deductible under Section 80G
           </p>
         </motion.div>

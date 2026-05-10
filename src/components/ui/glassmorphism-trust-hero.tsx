@@ -16,7 +16,7 @@ const PARTNERS = [
 
 const StatItem = ({ value, label }: { value: string; label: string }) => (
   <div className="flex flex-col items-center justify-center transition-transform hover:-translate-y-1 cursor-default">
-    <span className="text-xl font-bold text-white sm:text-2xl">{value}</span>
+    <span className="text-xl font-bold text-foreground sm:text-2xl">{value}</span>
     <span className="text-[10px] uppercase tracking-wider text-zinc-500 font-medium sm:text-xs">{label}</span>
   </div>
 );
@@ -140,7 +140,7 @@ export default function HeroSection() {
                 {PARTNERS.map((partner) => (
                   <span
                     key={partner}
-                    className="inline-flex items-center rounded-full border border-border bg-background/50 px-3 py-1 text-xs text-foreground/80 shadow-sm"
+                    className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs text-foreground/80 shadow-sm"
                   >
                     {partner}
                   </span>

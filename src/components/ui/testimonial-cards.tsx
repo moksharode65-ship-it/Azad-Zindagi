@@ -55,7 +55,7 @@ export function TestimonialCard({ handleShuffle, testimonial, position, id, auth
         height={128}
         className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-orange-500/50 bg-slate-200 object-cover"
       />
-      <span className="text-center text-lg italic text-white/80">&quot;{testimonial}&quot;</span>
+      <span className="text-center text-lg italic text-foreground/80">&quot;{testimonial}&quot;</span>
       <span className="text-center text-sm font-medium text-orange-400">{author}</span>
     </motion.div>
   );
