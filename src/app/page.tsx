@@ -416,12 +416,11 @@ function ImpactSection() {
   const scale = useTransform(scrollY, [0, 1000], [1, 1.1]);
 
   return (
-    <section id="impact" className="relative py-24 overflow-hidden">
+    <section id="impact" className="relative py-24 bg-background overflow-hidden">
       <motion.div
         style={{ scale }}
-        className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1920&q=80)] bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1920&q=80)] bg-cover bg-center opacity-10"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900/90 to-black" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -433,7 +432,7 @@ function ImpactSection() {
           <Badge className="mb-4 bg-orange-500/20 text-orange-400 border-orange-500/30">
             Our Impact
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Transforming <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-green-400">Lives</span>
           </h2>
         </motion.div>
@@ -451,8 +450,8 @@ function ImpactSection() {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500 to-green-500 flex items-center justify-center">
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
-              <div className="text-white/70">{stat.label}</div>
+              <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">{stat.number}</div>
+              <div className="text-muted-foreground">{stat.label}</div>
             </motion.div>
           ))}
         </div>
