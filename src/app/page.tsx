@@ -182,9 +182,10 @@ const impactStats = [
 // Team members
 const teamMembers = [
   { name: "Nayan Mali", role: "Founder & Chairperson", image: "/nayan.webp" },
-  { name: "Rajiv Sharma", role: "Executive Director", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" },
-  { name: "Priya Nair", role: "Program Director", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" },
-  { name: "Amit Verma", role: "Finance Head", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
+  { name: "Mr. Samuel Sonkamble", role: "Executive Director", image: "/samuel-sonkamble.jpeg" },
+  { name: "Mr. Lucas Caldeira", role: "Program Director", image: "/lucas-caldeira.jpeg" },
+  { name: "Dr. Stella Bokare", role: "Finance Head", image: "/stella-bokare.jpeg" },
+  { name: "Ms. Prashansa Sanjay Dalvi", role: "Team Member", image: "/prashansa-sanjay-dalvi.jpeg" },
 ];
 
 // Blog posts
