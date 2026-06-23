@@ -226,12 +226,15 @@ const impactStats = [
 ];
 
 // Team members
-const teamMembers = [
-  { name: "Nayan Mali", role: "Founder & Chairperson", image: "/nayan.webp" },
-  { name: "Mr. Samuel Sonkamble", role: "Executive Director", image: "/samuel-sonkamble.jpeg" },
-  { name: "Mr. Lucas Caldeira", role: "Program Director", image: "/lucas-caldeira.jpeg" },
-  { name: "Dr. Stella Bokare", role: "Finance Head", image: "/stella-bokare.jpeg" },
-  { name: "Ms. Prashansa Sanjay Dalvi", role: "Team Member", image: "/prashansa-sanjay-dalvi.jpeg" },
+const directors = [
+  { name: "Mr. Samuel Sonkamble", image: "/samuel-sonkamble.jpeg" },
+  { name: "Mr. Lucas Caldeira", image: "/lucas-caldeira.jpeg" },
+  { name: "Dr. Stella Bokare", image: "/stella-bokare.jpeg" },
+];
+
+const promoters = [
+  { name: "Nayan Mali", image: "/nayan.webp" },
+  { name: "Ms. Prashansa Sanjay Dalvi", image: "/prashansa-sanjay-dalvi.jpeg" },
 ];
 
 // Blog posts
@@ -269,7 +272,7 @@ function Navigation() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo-updated.jpeg"
+              src="/logo-updated.png"
               alt="Azad Zindagi Foundation"
               width={40}
               height={40}
@@ -663,7 +666,7 @@ function TeamSection() {
           className="text-center mb-16"
         >
           <Badge className="mb-4 bg-orange-500/20 text-orange-400 border-orange-500/30">
-            Leadership
+            Directors & Promoters
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-green-400">Team</span>
@@ -673,30 +676,62 @@ function TeamSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={member.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center group"
-            >
-              <div className="relative mb-4 rounded-2xl overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={400}
-                  height={400}
-                  className="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground">{member.name}</h3>
-              <p className="text-muted-foreground text-sm">{member.role}</p>
-            </motion.div>
-          ))}
+        <div className="space-y-10">
+          <div className="text-center">
+            <h3 className="text-sm uppercase tracking-[0.3em] text-orange-400/80 font-semibold mb-6">Directors</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {directors.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="relative mb-4 rounded-2xl overflow-hidden border border-white/10 bg-zinc-900">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={400}
+                    height={400}
+                    className="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground">{member.name}</h3>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h3 className="text-sm uppercase tracking-[0.3em] text-orange-400/80 font-semibold mb-6">Promoters</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {promoters.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="relative mb-4 rounded-2xl overflow-hidden border border-white/10 bg-zinc-900">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={400}
+                    height={400}
+                    className="w-full aspect-square object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground">{member.name}</h3>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -829,7 +864,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/logo-updated.jpeg"
+                src="/logo-updated.png"
                 alt="Azad Zindagi Foundation"
                 width={56}
                 height={56}
