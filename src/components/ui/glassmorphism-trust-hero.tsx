@@ -45,7 +45,7 @@ export default function HeroSection() {
           <div className="lg:col-span-7 flex flex-col justify-center space-y-8 pt-8">
             <div className="inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-3 py-1.5 backdrop-blur-md">
               <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-orange-300 flex items-center gap-2">
-                Pan-India Child Safety Initiative
+                Child Protection, Reintegration & Awareness
                 <Shield className="w-3.5 h-3.5 text-orange-400" />
               </span>
             </div>
@@ -68,7 +68,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed text-center lg:text-left">
-              Azad Zindagi Foundation works with government bodies, law enforcement, and NGO partners across India to prevent child trafficking, protect vulnerable children, and rehabilitate survivors into a life of dignity.
+              Azad Zindagi Foundation works with government bodies, law enforcement, NGO partners, families, and communities to assist missing children, prevent trafficking, create awareness, and support reintegration with dignity.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

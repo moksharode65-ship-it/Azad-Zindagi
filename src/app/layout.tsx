@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Azad Zindagi Foundation - Empowering Lives, Protecting Children",
-  description: "Azad Zindagi Foundation is a registered NGO dedicated to child safety, education, and empowering underprivileged communities across India. Donate now to make a difference.",
-  keywords: "NGO, child safety, education, India, donation, charity, empowerment, Azad Zindagi Foundation",
+  title: "Azad Zindagi Foundation - Protecting Children and Ending Trafficking",
+  description: "Azad Zindagi Foundation is a Section 8 company in Maharashtra working for rescued, missing, and trafficked children through tracing, awareness, education, and community action.",
+  keywords: "Azad Zindagi Foundation, child protection, trafficking, missing children, POCSO, Section 8 company, Maharashtra, education, awareness",
 };
 
 export default function RootLayout({

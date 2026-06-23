@@ -125,48 +125,94 @@ const testimonials = [
   }
 ];
 
+const whatWeDo = [
+  {
+    title: "Assisting rescued, missing and trafficked children",
+    description: "Address tracing, home investigation, and reintegration of missing children back home.",
+    icon: Shield,
+  },
+  {
+    title: "Education and awareness campaigns",
+    description: "Human trafficking, POCSO Act, career guidance, and online safety awareness programs.",
+    icon: BookOpen,
+  },
+  {
+    title: "Educational assistance",
+    description: "Support for POCSO victims and children of trafficked survivors or victims.",
+    icon: Heart,
+  },
+  {
+    title: "Community engagement",
+    description: "Sports, seminars, workshops, rallies, and other local protection activities.",
+    icon: Users,
+  },
+];
+
+const coreValues = [
+  {
+    title: "Compassion and Respect",
+    description: "Everyone should be treated with dignity and recognized for their inherent worth.",
+  },
+  {
+    title: "Empowerment",
+    description: "We empower children, families, and communities to build a safer and joyous future.",
+  },
+  {
+    title: "Inclusivity and Non-Discrimination",
+    description: "We champion diversity and equal protection for all people, regardless of background.",
+  },
+  {
+    title: "Collaboration and Partnership",
+    description: "We work with government mechanisms, NGOs, families, communities, and other stakeholders.",
+  },
+  {
+    title: "Advocacy and Policy Influence",
+    description: "We advocate for children&apos;s rights and systemic improvements in child protection.",
+  },
+];
+
 // Programs data
 const programs = [
   {
     icon: Shield,
-    title: "Child Safety",
-    description: "24/7 helpline, rescue operations, and rehabilitation for children at risk.",
-    impact: "5,000+ children protected",
+    title: "Tracing & Reintegration",
+    description: "Support for rescued, missing, and trafficked children through tracing and home investigation.",
+    impact: "Family reunification support",
     color: "from-orange-500 to-red-500"
   },
   {
     icon: BookOpen,
-    title: "Quality Education",
-    description: "Free schooling, books, uniforms, and after-school tutoring programs.",
-    impact: "3,000+ students enrolled",
+    title: "Awareness & Education",
+    description: "Campaigns on human trafficking, POCSO, career guidance, and online safety.",
+    impact: "Community education drives",
     color: "from-blue-500 to-cyan-500"
   },
   {
     icon: Heart,
-    title: "Healthcare Access",
-    description: "Mobile medical units, regular checkups, and emergency medical support.",
-    impact: "10,000+ health camps",
+    title: "Educational Assistance",
+    description: "Help for POCSO victims and children of trafficked survivors or victims.",
+    impact: "Support for vulnerable children",
     color: "from-green-500 to-emerald-500"
   },
   {
     icon: Users,
-    title: "Women Empowerment",
-    description: "Skill development, microfinance, and self-help groups for women.",
-    impact: "2,000+ women trained",
+    title: "Community Engagement",
+    description: "Sports, seminars, workshops, rallies, and local protection mechanisms.",
+    impact: "Stronger child-safe communities",
     color: "from-purple-500 to-pink-500"
   },
   {
     icon: Leaf,
-    title: "Sustainable Livelihoods",
-    description: "Vocational training and job placement for youth and adults.",
-    impact: "1,500+ employed",
+    title: "Child-Friendly Community",
+    description: "Mobilizing society to protect children and create safe, hopeful neighborhoods.",
+    impact: "Long-term prevention",
     color: "from-amber-500 to-orange-500"
   },
   {
     icon: Globe,
-    title: "Community Development",
-    description: "Infrastructure development, clean water, and sanitation projects.",
-    impact: "50+ villages transformed",
+    title: "Partnership & Advocacy",
+    description: "Working with law enforcement, government agencies, NGOs, and local bodies.",
+    impact: "System-wide collaboration",
     color: "from-teal-500 to-green-500"
   }
 ];
@@ -303,15 +349,13 @@ function AboutSection() {
               About Us
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              12+ Years of <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-green-400">Creating Change</span>
+              Protecting Children and <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-green-400">Creating a Child-Friendly Community</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Azad Zindagi Foundation is a registered non-profit organization dedicated to protecting children&apos;s rights,
-              providing quality education, and empowering communities across India.
+              Azad Zindagi Foundation believes every child needs Azadi, or freedom, from exploitation. Child protection matters, and it is everyone&apos;s responsibility to make it happen.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
-              Since 2012, we have been working tirelessly to ensure that every child has access to safety,
-              education, and healthcare. Our transparent approach ensures that your donations make a real impact.
+              It is registered as a Section 8 company in Maharashtra and is committed to combating human trafficking, assisting missing children, and protecting vulnerable children.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 text-foreground/80">
@@ -320,11 +364,11 @@ function AboutSection() {
               </div>
               <div className="flex items-center gap-2 text-foreground/80">
                 <Shield className="w-5 h-5 text-green-400" />
-                <span>Verified NGO</span>
+                <span>Section 8 Company</span>
               </div>
               <div className="flex items-center gap-2 text-foreground/80">
                 <Star className="w-5 h-5 text-yellow-400" />
-                <span>4.9★ Rating</span>
+                <span>Child Protection Focus</span>
               </div>
             </div>
           </motion.div>
@@ -346,11 +390,101 @@ function AboutSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-white font-semibold text-lg">Education for All</p>
-                <p className="text-white/60 text-sm">Our flagship program since 2016</p>
+                <p className="text-white font-semibold text-lg">Rights, Safety, and Reintegration</p>
+                <p className="text-white/60 text-sm">Working for rescued and vulnerable children</p>
               </div>
             </div>
           </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MissionSection() {
+  return (
+    <section className="py-24 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          className="text-center mb-16"
+        >
+          <Badge className="mb-4 bg-green-500/20 text-green-400 border-green-500/30">
+            Vision, Mission & Values
+          </Badge>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Why We <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-orange-400">Exist</span>
+          </h2>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-3 gap-6">
+          <Card className="bg-card border-border">
+            <CardHeader>
+              <CardTitle className="text-foreground">Vision</CardTitle>
+            </CardHeader>
+            <CardContent className="text-muted-foreground">
+              To see rescued trafficked and missing children assisted, the vulnerable protected, captives set free, and the oppressed experiencing hope and healing as neighbours are transformed.
+            </CardContent>
+          </Card>
+          <Card className="bg-card border-border">
+            <CardHeader>
+              <CardTitle className="text-foreground">Mission</CardTitle>
+            </CardHeader>
+            <CardContent className="text-muted-foreground">
+              To mobilize communities, financial partners, and all segments of society towards ending human trafficking and creating new futures through community-based action.
+            </CardContent>
+          </Card>
+          <Card className="bg-card border-border">
+            <CardHeader>
+              <CardTitle className="text-foreground">About</CardTitle>
+            </CardHeader>
+            <CardContent className="text-muted-foreground">
+              Protecting children and creating a child-friendly community through holistic support, reintegration, and collaborative prevention efforts.
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mt-6">
+          {whatWeDo.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ delay: index * 0.08 }}
+            >
+              <Card className="bg-card border-border h-full">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-green-500 flex items-center justify-center mb-4">
+                    <item.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <CardTitle className="text-foreground">{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground">{item.description}</CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mt-6">
+          {coreValues.map((value, index) => (
+            <motion.div
+              key={value.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ delay: index * 0.08 }}
+            >
+              <Card className="bg-card border-border h-full">
+                <CardHeader>
+                  <CardTitle className="text-foreground">{value.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-muted-foreground">{value.description}</CardContent>
+              </Card>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
@@ -708,7 +842,7 @@ function Footer() {
               </div>
             </div>
             <p className="text-muted-foreground text-sm mb-4">
-              Empowering lives, protecting children, and building stronger communities since 2012.
+              Protecting children, preventing trafficking, and building safer communities through action and partnership.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Facebook className="w-5 h-5" /></a>
@@ -745,15 +879,19 @@ function Footer() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 text-orange-400 mt-0.5" />
-                <span>123 NGO Street, Sector 15<br />New Delhi, India 110001</span>
+                <span>F 102 &amp; 103, Violet Bldg 16<br />Yashwant Nagar, Virar West, Palghar, Maharashtra 401303</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-orange-400" />
-                <span>+91 11 2345 6789</span>
+                <span>9892849479</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-5 h-5 text-orange-400" />
-                <span>info@azadfoundation.org</span>
+                <span>azadzindagifoundation@gmail.com</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Shield className="w-5 h-5 text-orange-400 mt-0.5" />
+                <span>CIN: U88900MH2025NPL458914</span>
               </li>
             </ul>
           </div>
@@ -781,6 +919,7 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <AboutSection />
+      <MissionSection />
       <ProgramsSection />
       <ImpactSection />
       <TimelineSection />
