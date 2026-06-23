@@ -223,7 +223,7 @@ function Navigation() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo.jpeg"
+              src="/logo-updated.jpeg"
               alt="Azad Zindagi Foundation"
               width={40}
               height={40}
@@ -695,7 +695,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/logo.jpeg"
+                src="/logo-updated.jpeg"
                 alt="Azad Zindagi Foundation"
                 width={56}
                 height={56}

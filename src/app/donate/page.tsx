@@ -40,7 +40,7 @@ export default function DonatePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center">
           <Link href="/" className="flex items-center gap-3 group">
             <ArrowLeft className="w-4 h-4 text-zinc-500 group-hover:text-white transition-colors" />
-            <Image src="/logo.jpeg" alt="Azad Zindagi Foundation" width={36} height={36} className="rounded-lg" />
+            <Image src="/logo-updated.jpeg" alt="Azad Zindagi Foundation" width={36} height={36} className="rounded-lg" />
             <span className="text-sm font-semibold text-zinc-300 group-hover:text-white transition-colors hidden sm:block">
               Azad Zindagi Foundation
             </span>
@@ -166,7 +166,7 @@ export default function DonatePage() {
               <h3 className="text-sm font-semibold text-orange-300 uppercase tracking-wider mb-4">Scanner</h3>
               <div className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-white p-4">
                 <Image
-                  src="/logo.png"
+                  src="/logo-updated.jpeg"
                   alt="Donation scanner"
                   width={800}
                   height={800}

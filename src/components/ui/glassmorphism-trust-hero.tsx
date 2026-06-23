@@ -52,7 +52,7 @@ export default function HeroSection() {
 
             <div className="mb-2">
               <Image
-                src="/logo.jpeg"
+                src="/logo-updated.jpeg"
                 alt="Azad Zindagi Foundation"
                 width={120}
                 height={120}
