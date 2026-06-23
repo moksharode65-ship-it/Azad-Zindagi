@@ -29,82 +29,11 @@ import {
   Calendar
 } from "lucide-react";
 import HeroSection from "@/components/ui/glassmorphism-trust-hero";
-import RadialOrbitalTimeline from "@/components/ui/radial-orbital-timeline";
 import { TestimonialCard } from "@/components/ui/testimonial-cards";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "@/components/theme-toggle";
-
-// Timeline data for the orbital component
-const timelineData = [
-  {
-    id: 1,
-    title: "Founded 2012",
-    date: "2012",
-    content: "Azad Zindagi Foundation was established with a mission to protect and empower underprivileged children across India.",
-    category: "Milestone",
-    icon: Star,
-    relatedIds: [2],
-    status: "completed" as const,
-    energy: 100,
-  },
-  {
-    id: 2,
-    title: "Child Safety Program",
-    date: "2014",
-    content: "Launched comprehensive child safety initiatives reaching 5,000+ children in rural communities.",
-    category: "Program",
-    icon: Shield,
-    relatedIds: [1, 3],
-    status: "completed" as const,
-    energy: 90,
-  },
-  {
-    id: 3,
-    title: "Education Initiative",
-    date: "2016",
-    content: "Started free education programs providing books, uniforms, and tutoring to 3,000+ students annually.",
-    category: "Program",
-    icon: BookOpen,
-    relatedIds: [2, 4],
-    status: "completed" as const,
-    energy: 85,
-  },
-  {
-    id: 4,
-    title: "Healthcare Camps",
-    date: "2018",
-    content: "Established mobile healthcare units conducting regular medical camps in underserved areas.",
-    category: "Program",
-    icon: Heart,
-    relatedIds: [3, 5],
-    status: "completed" as const,
-    energy: 75,
-  },
-  {
-    id: 5,
-    title: "Skill Development",
-    date: "2020",
-    content: "Introduced vocational training programs for youth, enabling sustainable livelihoods.",
-    category: "Program",
-    icon: Users,
-    relatedIds: [4, 6],
-    status: "in-progress" as const,
-    energy: 60,
-  },
-  {
-    id: 6,
-    title: "Vision 2030",
-    date: "2024-2030",
-    content: "Expanding reach to 100,000 children with holistic development programs across 10 states.",
-    category: "Future",
-    icon: Target,
-    relatedIds: [5],
-    status: "pending" as const,
-    energy: 40,
-  },
-];
 
 // Testimonials data
 const testimonials = [
@@ -598,15 +527,6 @@ function ImpactSection() {
   );
 }
 
-// Timeline Section
-function TimelineSection() {
-  return (
-    <section className="py-24 bg-background">
-      <RadialOrbitalTimeline timelineData={timelineData} />
-    </section>
-  );
-}
-
 // Testimonials Section
 function TestimonialsSection() {
   const [positions, setPositions] = useState(["front", "middle", "back"]);
@@ -678,7 +598,7 @@ function TeamSection() {
 
         <div className="space-y-10">
           <div className="text-center">
-            <h3 className="text-sm uppercase tracking-[0.3em] text-orange-400/80 font-semibold mb-6">Directors</h3>
+            <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Directors</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {directors.map((member, index) => (
@@ -706,7 +626,7 @@ function TeamSection() {
           </div>
 
           <div className="text-center">
-            <h3 className="text-sm uppercase tracking-[0.3em] text-orange-400/80 font-semibold mb-6">Promoters</h3>
+            <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Promoters</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {promoters.map((member, index) => (
@@ -957,7 +877,6 @@ export default function Home() {
       <MissionSection />
       <ProgramsSection />
       <ImpactSection />
-      <TimelineSection />
       <TestimonialsSection />
       <TeamSection />
       <BlogSection />
