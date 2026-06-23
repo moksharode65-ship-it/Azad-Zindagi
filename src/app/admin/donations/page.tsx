@@ -17,7 +17,7 @@ export default async function DonationsAdminPage() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div>
             <h1 className="text-3xl font-bold">Donations Admin</h1>
-            <p className="text-zinc-400 text-sm">Verified donations captured from Razorpay checkout.</p>
+            <p className="text-zinc-400 text-sm">Verified donations captured through the donation flow.</p>
           </div>
           <div className="flex gap-3">
             <form action="/api/admin/logout" method="post">
