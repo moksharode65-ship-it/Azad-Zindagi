@@ -463,8 +463,8 @@ export default function OrbitSection() {
           viewport={{ once: false }}
           className="text-center mb-12 md:mb-16"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-1.5 mb-5">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-green-500 dark:text-green-400">
+          <div className="inline-flex items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-6 md:px-8 py-3 mb-6">
+            <span className="text-lg md:text-xl font-bold uppercase tracking-[0.2em] text-green-500 dark:text-green-400">
               Vision, Mission & Values
             </span>
           </div>

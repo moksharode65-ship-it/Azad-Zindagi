@@ -138,13 +138,6 @@ const blogPosts = [
     date: "Apr 5, 2026",
     image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80",
     category: "Safety"
-  },
-  {
-    title: "Women Who Lead: Success Stories",
-    excerpt: "Inspiring stories of women who transformed their lives through our programs...",
-    date: "Mar 28, 2026",
-    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&q=80",
-    category: "Empowerment"
   }
 ];
 
@@ -268,7 +261,7 @@ function AboutSection() {
           >
             <div className="relative rounded-2xl overflow-hidden h-[400px] md:h-[500px] shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80"
+                src="/about-image.jpeg"
                 alt="Children learning"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -334,7 +327,7 @@ function ProgramsSection() {
           viewport={{ once: false }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-green-500/20 text-green-400 border-green-500/30">
+          <Badge className="mb-6 bg-green-500/20 text-green-400 border-green-500/30 text-lg md:text-xl px-6 md:px-8 py-3 font-semibold">
             Our Programs
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -396,7 +389,7 @@ function ImpactSection() {
           viewport={{ once: false }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-orange-500/20 text-orange-400 border-orange-500/30">
+          <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 text-lg md:text-xl px-6 md:px-8 py-3 font-semibold">
             Our Impact
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -429,14 +422,6 @@ function ImpactSection() {
 
 // Testimonials Section
 function TestimonialsSection() {
-  const [positions, setPositions] = useState(["front", "middle", "back"]);
-
-  const handleShuffle = () => {
-    const newPositions = [...positions];
-    newPositions.unshift(newPositions.pop()!);
-    setPositions(newPositions);
-  };
-
   return (
     <section className="py-24 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -446,28 +431,39 @@ function TestimonialsSection() {
           viewport={{ once: false }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-green-500/20 text-green-400 border-green-500/30">
+          <Badge className="mb-6 bg-green-500/20 text-green-400 border-green-500/30 text-lg md:text-xl px-6 md:px-8 py-3 font-semibold">
             Testimonials
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Stories of <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-orange-400">Hope</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Drag the cards to see more stories from our community
-          </p>
         </motion.div>
 
-        <div className="relative h-[450px] md:h-[500px] w-full flex items-center justify-center">
-          <div className="relative -ml-[145px] h-[400px] md:h-[450px] w-[290px] md:w-[350px] md:-ml-[175px]">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={testimonial.id}
-                {...testimonial}
-                handleShuffle={handleShuffle}
-                position={positions[index]}
-              />
-            ))}
-          </div>
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            className="rounded-2xl overflow-hidden border border-border/50 shadow-2xl"
+          >
+            <video 
+              src="/WhatsApp%20Video%202026-06-29%20at%206.42.47%20PM.mp4" 
+              controls 
+              className="w-full aspect-video object-cover"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            className="rounded-2xl overflow-hidden border border-border/50 shadow-2xl"
+          >
+            <video 
+              src="/prince-story.mp4" 
+              controls 
+              className="w-full aspect-video object-cover"
+            />
+          </motion.div>
         </div>
       </div>
     </section>
@@ -485,8 +481,8 @@ function TeamSection() {
           viewport={{ once: false }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-orange-500/20 text-orange-400 border-orange-500/30">
-            Directors & Promoters
+          <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 text-lg md:text-xl px-6 md:px-8 py-3 font-semibold">
+            Key Functionaries & Promoters
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-green-400">Team</span>
@@ -498,7 +494,7 @@ function TeamSection() {
 
         <div className="space-y-10">
           <div className="text-center">
-            <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Directors</h3>
+            <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Key Functionaries</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {directors.map((member, index) => (
@@ -569,7 +565,7 @@ function BlogSection() {
           viewport={{ once: false }}
           className="text-center mb-16"
         >
-          <Badge className="mb-4 bg-green-500/20 text-green-400 border-green-500/30">
+          <Badge className="mb-6 bg-green-500/20 text-green-400 border-green-500/30 text-lg md:text-xl px-6 md:px-8 py-3 font-semibold">
             Blog & News
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -658,13 +654,6 @@ function DonateCTA() {
                 Donate Now <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 font-semibold px-8 py-6 text-lg"
-            >
-              Become a Partner
-            </Button>
           </div>
           <p className="text-white/70 text-sm mt-6">
             All donations are 100% tax deductible under Section 80G
@@ -724,7 +713,6 @@ function Footer() {
               <li><a href="#" className="hover:text-foreground transition-colors">Child Safety</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Education</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Healthcare</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Women Empowerment</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Skill Development</a></li>
             </ul>
           </div>
