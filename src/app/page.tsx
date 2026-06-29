@@ -9,7 +9,6 @@ import {
   Shield,
   BookOpen,
   Users,
-  Target,
   Award,
   Leaf,
   ArrowRight,
@@ -29,6 +28,7 @@ import {
   Calendar
 } from "lucide-react";
 import HeroSection from "@/components/ui/glassmorphism-trust-hero";
+import OrbitSection from "@/components/ui/orbit-section";
 import { TestimonialCard } from "@/components/ui/testimonial-cards";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -54,51 +54,8 @@ const testimonials = [
   }
 ];
 
-const whatWeDo = [
-  {
-    title: "Assisting rescued, missing and trafficked children",
-    description: "Address tracing, home investigation, and reintegration of missing children back home.",
-    icon: Shield,
-  },
-  {
-    title: "Education and awareness campaigns",
-    description: "Human trafficking, POCSO Act, career guidance, and online safety awareness programs.",
-    icon: BookOpen,
-  },
-  {
-    title: "Educational assistance",
-    description: "Support for POCSO victims and children of trafficked survivors or victims.",
-    icon: Heart,
-  },
-  {
-    title: "Community engagement",
-    description: "Sports, seminars, workshops, rallies, and other local protection activities.",
-    icon: Users,
-  },
-];
 
-const coreValues = [
-  {
-    title: "Compassion and Respect",
-    description: "Everyone should be treated with dignity and recognized for their inherent worth.",
-  },
-  {
-    title: "Empowerment",
-    description: "We empower children, families, and communities to build a safer and joyous future.",
-  },
-  {
-    title: "Inclusivity and Non-Discrimination",
-    description: "We champion diversity and equal protection for all people, regardless of background.",
-  },
-  {
-    title: "Collaboration and Partnership",
-    description: "We work with government mechanisms, NGOs, families, communities, and other stakeholders.",
-  },
-  {
-    title: "Advocacy and Policy Influence",
-    description: "We advocate for children&apos;s rights and systemic improvements in child protection.",
-  },
-];
+
 
 // Programs data
 const programs = [
@@ -162,7 +119,7 @@ const directors = [
 ];
 
 const promoters = [
-  { name: "Nayan Mali", image: "/nayan.webp" },
+  { name: "Mr. Nayan Mali", image: "/nayan.webp" },
   { name: "Ms. Prashansa Sanjay Dalvi", image: "/prashansa-sanjay-dalvi.jpeg" },
 ];
 
@@ -215,6 +172,7 @@ function Navigation() {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
+            <a href="#home" className="text-sm text-foreground/80 hover:text-foreground transition-colors font-medium">Home</a>
             <a href="#about" className="text-sm text-foreground/80 hover:text-foreground transition-colors font-medium">About</a>
             <a href="#programs" className="text-sm text-foreground/80 hover:text-foreground transition-colors font-medium">Programs</a>
             <a href="#impact" className="text-sm text-foreground/80 hover:text-foreground transition-colors font-medium">Impact</a>
@@ -237,12 +195,13 @@ function Navigation() {
       {isOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border shadow-xl">
           <div className="px-4 py-6 space-y-4">
-            <a href="#about" className="block text-foreground/80 hover:text-foreground font-medium text-lg">About</a>
-            <a href="#programs" className="block text-foreground/80 hover:text-foreground font-medium text-lg">Programs</a>
-            <a href="#impact" className="block text-foreground/80 hover:text-foreground font-medium text-lg">Impact</a>
-            <a href="#team" className="block text-foreground/80 hover:text-foreground font-medium text-lg">Team</a>
-            <a href="#blog" className="block text-foreground/80 hover:text-foreground font-medium text-lg">Blog</a>
-            <Link href="/donate" className="w-full">
+            <a href="#home" className="block text-foreground/80 hover:text-foreground font-medium text-lg" onClick={() => setIsOpen(false)}>Home</a>
+            <a href="#about" className="block text-foreground/80 hover:text-foreground font-medium text-lg" onClick={() => setIsOpen(false)}>About</a>
+            <a href="#programs" className="block text-foreground/80 hover:text-foreground font-medium text-lg" onClick={() => setIsOpen(false)}>Programs</a>
+            <a href="#impact" className="block text-foreground/80 hover:text-foreground font-medium text-lg" onClick={() => setIsOpen(false)}>Impact</a>
+            <a href="#team" className="block text-foreground/80 hover:text-foreground font-medium text-lg" onClick={() => setIsOpen(false)}>Team</a>
+            <a href="#blog" className="block text-foreground/80 hover:text-foreground font-medium text-lg" onClick={() => setIsOpen(false)}>Blog</a>
+            <Link href="/donate" className="w-full" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 h-12 text-lg">Donate Now</Button>
             </Link>
             <div className="flex justify-center pt-2">
@@ -266,42 +225,37 @@ function AboutSection() {
       {/* Parallax Background */}
       <motion.div
         style={{ y, opacity }}
-        className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1920&q=80)] bg-cover bg-center opacity-10"
+        className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1920&q=80)] bg-cover bg-center opacity-20"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
           >
-            <Badge className="mb-4 bg-orange-500/20 text-orange-400 border-orange-500/30">
+            <Badge className="mb-6 bg-orange-500/10 text-orange-500 dark:text-orange-400 border-orange-500/20 shadow-sm px-4 py-1.5 text-sm">
               About Us
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Protecting Children and <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-green-400">Creating a Child-Friendly Community</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-[1.1]">
+              Protecting Children and <br className="hidden lg:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-green-500">Creating a Child-Friendly Community</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Azad Zindagi Foundation believes every child needs Azadi, or freedom, from exploitation. Child protection matters, and it is everyone&apos;s responsibility to make it happen.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8">
-              It is registered as a Section 8 company in Maharashtra and is committed to combating human trafficking, assisting missing children, and protecting vulnerable children.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 text-foreground/80">
-                <Award className="w-5 h-5 text-orange-400" />
-                <span>80G Certified</span>
-              </div>
-              <div className="flex items-center gap-2 text-foreground/80">
-                <Shield className="w-5 h-5 text-green-400" />
-                <span>Section 8 Company</span>
-              </div>
-              <div className="flex items-center gap-2 text-foreground/80">
-                <Star className="w-5 h-5 text-yellow-400" />
-                <span>Child Protection Focus</span>
-              </div>
+            
+            <div className="space-y-6">
+              <p className="text-lg md:text-xl text-foreground/90 font-medium leading-relaxed border-l-4 border-orange-500 pl-6">
+                Azad Zindagi affirms that every child&apos;s life is precious and deserves a safe, protective environment where they can grow free from harm, abuse, and exploitation.
+              </p>
+              
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                A collective of like-minded individuals from diverse fields united with a shared commitment to defend voiceless children. Guided by a strong child rights ethos, they work through targeted initiatives to safeguard every child&apos;s protection rights, promote safety, and ensure vulnerable children receive the care, dignity, and security they deserve.
+              </p>
+              
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Prior to its formal registration, the initiative operated under various organisations, sustained by the unwavering commitment, encouragement, and financial support of individuals to protect and uplift vulnerable children since 2019. Finally, Azad Zindagi Foundation was incorporated in 2025 as a not-for-profit organisation registered under Section 8 of the Companies Act, 2013.
+              </p>
             </div>
           </motion.div>
 
@@ -312,115 +266,61 @@ function AboutSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden h-[300px] md:h-[500px]">
+            <div className="relative rounded-2xl overflow-hidden h-[400px] md:h-[500px] shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80"
                 alt="Children learning"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-white font-semibold text-lg">Rights, Safety, and Reintegration</p>
-                <p className="text-white/60 text-sm">Working for rescued and vulnerable children</p>
+                <p className="text-white font-bold text-xl mb-1">Rights, Safety, and Reintegration</p>
+                <p className="text-white/80 text-sm font-medium">Working for rescued and vulnerable children</p>
               </div>
             </div>
           </motion.div>
         </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          <div className="flex flex-col items-center sm:items-start p-6 md:p-8 rounded-[2rem] bg-background/50 border border-border/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-orange-500/30 group">
+            <div className="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <Award className="w-7 h-7 text-orange-500" />
+            </div>
+            <span className="text-xl font-bold text-foreground mb-1">80G Certified</span>
+            <span className="text-sm text-muted-foreground text-center sm:text-left">100% Tax Exempt Donations</span>
+          </div>
+          
+          <div className="flex flex-col items-center sm:items-start p-6 md:p-8 rounded-[2rem] bg-background/50 border border-border/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-green-500/30 group">
+            <div className="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <Shield className="w-7 h-7 text-green-500" />
+            </div>
+            <span className="text-xl font-bold text-foreground mb-1">Section 8</span>
+            <span className="text-sm text-muted-foreground text-center sm:text-left">Registered Non-Profit Govt Org</span>
+          </div>
+          
+          <div className="flex flex-col items-center sm:items-start p-6 md:p-8 rounded-[2rem] bg-background/50 border border-border/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-amber-500/30 group">
+            <div className="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <Star className="w-7 h-7 text-amber-500" />
+            </div>
+            <span className="text-xl font-bold text-foreground mb-1">Child Focus</span>
+            <span className="text-sm text-muted-foreground text-center sm:text-left">Safety and Protection First</span>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 }
 
 function MissionSection() {
-  return (
-    <section className="py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          className="text-center mb-16"
-        >
-          <Badge className="mb-4 bg-green-500/20 text-green-400 border-green-500/30">
-            Vision, Mission & Values
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Why We <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-orange-400">Exist</span>
-          </h2>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-3 gap-6">
-          <Card className="bg-card border-border">
-            <CardHeader>
-              <CardTitle className="text-foreground">Vision</CardTitle>
-            </CardHeader>
-            <CardContent className="text-muted-foreground">
-              To see rescued trafficked and missing children assisted, the vulnerable protected, captives set free, and the oppressed experiencing hope and healing as neighbours are transformed.
-            </CardContent>
-          </Card>
-          <Card className="bg-card border-border">
-            <CardHeader>
-              <CardTitle className="text-foreground">Mission</CardTitle>
-            </CardHeader>
-            <CardContent className="text-muted-foreground">
-              To mobilize communities, financial partners, and all segments of society towards ending human trafficking and creating new futures through community-based action.
-            </CardContent>
-          </Card>
-          <Card className="bg-card border-border">
-            <CardHeader>
-              <CardTitle className="text-foreground">About</CardTitle>
-            </CardHeader>
-            <CardContent className="text-muted-foreground">
-              Protecting children and creating a child-friendly community through holistic support, reintegration, and collaborative prevention efforts.
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 mt-6">
-          {whatWeDo.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ delay: index * 0.08 }}
-            >
-              <Card className="bg-card border-border h-full">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-green-500 flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle className="text-foreground">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground">{item.description}</CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 mt-6">
-          {coreValues.map((value, index) => (
-            <motion.div
-              key={value.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ delay: index * 0.08 }}
-            >
-              <Card className="bg-card border-border h-full">
-                <CardHeader>
-                  <CardTitle className="text-foreground">{value.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground">{value.description}</CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return <OrbitSection />;
 }
 
 // Programs Section
@@ -486,7 +386,7 @@ function ImpactSection() {
     <section id="impact" className="relative py-24 bg-background overflow-hidden">
       <motion.div
         style={{ scale }}
-        className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1920&q=80)] bg-cover bg-center opacity-10"
+        className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1920&q=80)] bg-cover bg-center opacity-20"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -800,10 +700,10 @@ function Footer() {
               Protecting children, preventing trafficking, and building safer communities through action and partnership.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Linkedin className="w-5 h-5" /></a>
+              <a href="#" title="Facebook" className="text-muted-foreground hover:text-foreground transition-colors"><Facebook className="w-5 h-5" /></a>
+              <a href="#" title="Twitter" className="text-muted-foreground hover:text-foreground transition-colors"><Twitter className="w-5 h-5" /></a>
+              <a href="#" title="Instagram" className="text-muted-foreground hover:text-foreground transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="#" title="LinkedIn" className="text-muted-foreground hover:text-foreground transition-colors"><Linkedin className="w-5 h-5" /></a>
             </div>
           </div>
 

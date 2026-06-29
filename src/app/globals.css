@@ -225,3 +225,103 @@ html {
 .text-white\/80 {
   color: rgba(255, 255, 255, 0.8);
 }
+
+/* ===== Orbital Section Animations ===== */
+
+@keyframes orbitInner {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbitOuter {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes counterRotateInner {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes counterRotateOuter {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4), 0 0 60px rgba(249, 115, 22, 0.1);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.6), 0 0 100px rgba(249, 115, 22, 0.2);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes floatParticle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+}
+
+.orbit-inner {
+  animation: orbitInner 30s linear infinite;
+}
+
+.orbit-outer {
+  animation: orbitOuter 60s linear infinite;
+}
+
+.counter-rotate-inner {
+  animation: counterRotateInner 30s linear infinite;
+}
+
+.counter-rotate-outer {
+  animation: counterRotateOuter 60s linear infinite;
+}
+
+.orbit-paused .orbit-inner,
+.orbit-paused .orbit-outer,
+.orbit-paused .counter-rotate-inner,
+.orbit-paused .counter-rotate-outer {
+  animation-play-state: paused;
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.pulse-ring {
+  animation: pulseRing 3s ease-out infinite;
+}
+
+.pulse-ring-delayed {
+  animation: pulseRing 3s ease-out infinite;
+  animation-delay: 1s;
+}
+
+.pulse-ring-delayed-2 {
+  animation: pulseRing 3s ease-out infinite;
+  animation-delay: 2s;
+}
