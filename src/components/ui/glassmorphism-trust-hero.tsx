@@ -43,8 +43,11 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tighter leading-[1.1] md:leading-[0.9] text-center lg:text-left">
-              <span className="text-foreground">give an Azad Zindagi to every child</span>
+            <h1 className="text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold tracking-tighter leading-[1.2] text-center lg:text-left">
+              <span className="text-foreground">Give an </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-green-500">Azad Zindagi</span>
+              <br className="hidden sm:block" />
+              <span className="text-foreground"> to every child</span>
             </h1>
 
             <div className="max-w-2xl space-y-5 text-center lg:text-left">
