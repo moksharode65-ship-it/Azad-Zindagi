@@ -17,6 +17,13 @@
 /.next/
 /out/
 
+# videos (do not push to GitHub)
+*.mp4
+*.webm
+*.mov
+*.mkv
+
+
 # production
 /build
 
@@ -32,6 +39,11 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+
+# also ignore common video names
+WhatsApp*Video*.mp4
+*story.mp4
+
 
 # vercel
 .vercel
