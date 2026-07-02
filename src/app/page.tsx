@@ -439,51 +439,23 @@ function GallerySection() {
             Our Work in Action
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Photo & Video <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-orange-400">Gallery</span>
+            Photo <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-orange-400">Gallery</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A glimpse into our initiatives, campaigns, and the lives we touch.
           </p>
         </motion.div>
 
-        {/* Videos */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false }}
-            className="rounded-2xl overflow-hidden border border-border/50 shadow-2xl bg-black"
-          >
-            <video 
-              src="/WhatsApp%20Video%202026-06-29%20at%206.42.47%20PM.mp4" 
-              controls 
-              className="w-full aspect-video object-cover"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false }}
-            className="rounded-2xl overflow-hidden border border-border/50 shadow-2xl bg-black"
-          >
-            <video 
-              src="/prince-story.mp4" 
-              controls 
-              className="w-full aspect-video object-cover"
-            />
-          </motion.div>
-        </div>
-
         {/* Photos Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 max-w-5xl mx-auto">
           {images.map((src, index) => (
             <motion.div
               key={src}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
-              transition={{ delay: index * 0.1 }}
-              className="relative aspect-square md:aspect-[4/3] overflow-hidden rounded-xl md:rounded-2xl border border-border/50 shadow-lg group bg-zinc-900"
+              transition={{ delay: index * 0.08 }}
+              className="relative aspect-square overflow-hidden rounded-lg md:rounded-xl border border-border/50 shadow-lg group bg-zinc-900"
             >
               <Image
                 src={src}
