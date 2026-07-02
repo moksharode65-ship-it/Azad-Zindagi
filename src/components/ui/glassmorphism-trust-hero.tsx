@@ -3,15 +3,15 @@ import Link from "next/link";
 import { ArrowRight, Phone, Shield } from "lucide-react";
 
 const PROTECTION_THREATS = [
-  "Child trafficking",
-  "Child labour and hazardous work",
-  "Child marriage",
-  "Physical abuse",
-  "Sexual abuse and exploitation",
-  "Emotional and psychological abuse",
-  "Neglect and abandonment",
-  "Online abuse and cyber exploitation",
-  "Violence in homes, schools, institutions, and communities",
+  "Child Trafficking",
+  "Child Labour And Hazardous Work",
+  "Child Marriage",
+  "Physical Abuse",
+  "Sexual Abuse And Exploitation",
+  "Emotional And Psychological Abuse",
+  "Neglect And Abandonment",
+  "Online Abuse And Cyber Exploitation",
+  "Violence In Homes, Schools, Institutions, And Communities",
 ];
 
 export default function HeroSection() {
@@ -44,9 +44,7 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tighter leading-[1.1] md:leading-[0.9] text-center lg:text-left">
-              <span className="text-foreground">No child should ever be exploited</span>
-              <br className="hidden md:block" />
-              <span className="bg-gradient-to-br from-orange-400 via-orange-500 to-green-500 bg-clip-text text-transparent px-1">for their weakness or innocence.</span>
+              <span className="text-foreground">give an Azad Zindagi to every child</span>
             </h1>
 
             <div className="max-w-2xl space-y-5 text-center lg:text-left">
@@ -88,7 +86,7 @@ export default function HeroSection() {
                     <Shield className="h-6 w-6" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-foreground leading-tight">
-                    A child has the right to be <span className="text-orange-600 dark:text-orange-500">protected from</span>
+                    A CHILD HAS THE RIGHT TO BE <span className="text-orange-600 dark:text-orange-500">PROTECTED FROM</span>
                   </h3>
                 </div>
                 

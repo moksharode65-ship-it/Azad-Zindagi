@@ -25,7 +25,13 @@ import {
   Star,
   Globe,
   Sparkles,
-  Calendar
+  Calendar,
+  Megaphone,
+  Search,
+  Home as HomeIcon,
+  Handshake,
+  Landmark,
+  CheckCircle2
 } from "lucide-react";
 import HeroSection from "@/components/ui/glassmorphism-trust-hero";
 import OrbitSection from "@/components/ui/orbit-section";
@@ -49,7 +55,7 @@ const programs = [
   },
   {
     icon: BookOpen,
-    title: "Awareness & Education",
+    title: "Education and Awareness",
     description: "Campaigns on human trafficking, POCSO, career guidance, and online safety.",
     impact: "Community education drives",
     color: "from-blue-500 to-cyan-500"
@@ -86,10 +92,15 @@ const programs = [
 
 // Impact stats
 const impactStats = [
-  { number: "15,000+", label: "Children Impacted", icon: Users },
-  { number: "12+", label: "Years of Service", icon: Calendar },
-  { number: "50,000+", label: "Lives Touched", icon: Heart },
-  { number: "100%", label: "Transparent", icon: Award },
+  { number: "129", label: "Awareness & education campaigns", icon: Megaphone },
+  { number: "29,463", label: "Children prevented through education", icon: Shield },
+  { number: "1,603", label: "Missing cases assisted", icon: Search },
+  { number: "988", label: "Children reintegrated & rehabilitated", icon: HomeIcon },
+  { number: "215", label: "Home Investigations conducted", icon: MapPin },
+  { number: "09", label: "Children receiving educational support", icon: BookOpen },
+  { number: "16+", label: "NGO partners", icon: Handshake },
+  { number: "32+", label: "Collaborations with Govt. mechanisms", icon: Landmark },
+  { number: "33,969+", label: "Total lives impacted", icon: Users },
 ];
 
 // Team members
@@ -101,7 +112,7 @@ const directors = [
 
 const promoters = [
   { name: "Mr. Nayan Mali", image: "/nayan.webp" },
-  { name: "Ms. Prashansa Sanjay Dalvi", image: "/prashansa-sanjay-dalvi.jpeg" },
+  { name: "Ms. Prashansa Dalvi", image: "/prashansa-sanjay-dalvi.jpeg" },
 ];
 
 // Blog posts
@@ -228,7 +239,7 @@ function AboutSection() {
               </p>
               
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Prior to its formal registration, the initiative operated under various organisations, sustained by the unwavering commitment, encouragement, and financial support of individuals to protect and uplift vulnerable children since 2019. Finally, Azad Zindagi Foundation was incorporated in 2025 as a not-for-profit organisation registered under Section 8 of the Companies Act, 2013.
+                Prior to its formal registration, the child protection initiative operated under various organisations, sustained by the unwavering commitment, encouragement, and financial support of individuals to protect and uplift vulnerable children since 2019. Finally, Azad Zindagi Foundation was incorporated in 2025 as a not-for-profit organisation registered under Section 8 of the Companies Act, 2013.
               </p>
             </div>
           </motion.div>
@@ -268,24 +279,33 @@ function AboutSection() {
             <div className="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <Award className="w-7 h-7 text-orange-500" />
             </div>
-            <span className="text-xl font-bold text-foreground mb-1">80G Certified</span>
-            <span className="text-sm text-muted-foreground text-center sm:text-left">100% Tax Exempt Donations</span>
+            <span className="text-lg font-bold text-foreground mb-1 leading-tight text-center sm:text-left">Incorporated under Section 8</span>
+            <span className="text-sm text-muted-foreground text-center sm:text-left mt-2 block">
+              of the Companies Act, 2013 as a not-for-profit organisation<br /><br />
+              <strong className="text-foreground">Date of incorporation:</strong> 13/10/2025
+            </span>
           </div>
           
           <div className="flex flex-col items-center sm:items-start p-6 md:p-8 rounded-[2rem] bg-background/50 border border-border/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-green-500/30 group">
             <div className="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <Shield className="w-7 h-7 text-green-500" />
             </div>
-            <span className="text-xl font-bold text-foreground mb-1">Section 8</span>
-            <span className="text-sm text-muted-foreground text-center sm:text-left">Registered Non-Profit Govt Org</span>
+            <span className="text-lg font-bold text-foreground mb-1 leading-tight text-center sm:text-left">Registration Details</span>
+            <span className="text-sm text-muted-foreground text-center sm:text-left mt-2 block space-y-2">
+              <span className="block"><strong className="text-foreground">CIN:</strong> U88900MH2025NPL458914</span>
+              <span className="block"><strong className="text-foreground">Darpan ID:</strong> MH/2026/1031675</span>
+            </span>
           </div>
           
           <div className="flex flex-col items-center sm:items-start p-6 md:p-8 rounded-[2rem] bg-background/50 border border-border/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-amber-500/30 group">
             <div className="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <Star className="w-7 h-7 text-amber-500" />
             </div>
-            <span className="text-xl font-bold text-foreground mb-1">Child Focus</span>
-            <span className="text-sm text-muted-foreground text-center sm:text-left">Safety and Protection First</span>
+            <span className="text-lg font-bold text-foreground mb-1 leading-tight text-center sm:text-left">Tax Details</span>
+            <span className="text-sm text-muted-foreground text-center sm:text-left mt-2 block space-y-2">
+              <span className="block"><strong className="text-foreground">PAN details:</strong> ABDCA9553B</span>
+              <span className="block"><strong className="text-foreground">TAN details:</strong> PNEA56777A</span>
+            </span>
           </div>
         </motion.div>
       </div>
@@ -315,7 +335,7 @@ function ProgramsSection() {
             Making a <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-orange-400">Difference</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive programs designed to create lasting change in the lives of underprivileged children and communities.
+            Focused on Child protection issues - if not all, but one child at a time. <br className="hidden md:block" />A step towards AZADI (Freedom)
           </p>
         </motion.div>
 
@@ -374,11 +394,12 @@ function ImpactSection() {
             Our Impact
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Transforming <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-green-400">Lives</span>
+            The difference we <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-green-400">make</span>
           </h2>
+          <p className="text-lg text-muted-foreground font-medium">(Same team, same work but new registration)</p>
         </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
           {impactStats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -401,8 +422,10 @@ function ImpactSection() {
   );
 }
 
-// Testimonials Section
-function TestimonialsSection() {
+// Photo & Video Gallery Section
+function GallerySection() {
+  const images = Array.from({ length: 9 }, (_, i) => `/gallery/gallery-${i + 1}.jpeg`);
+  
   return (
     <section className="py-24 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -413,19 +436,23 @@ function TestimonialsSection() {
           className="text-center mb-16"
         >
           <Badge className="mb-6 bg-green-500/20 text-green-400 border-green-500/30 text-lg md:text-xl px-6 md:px-8 py-3 font-semibold">
-            Testimonials
+            Our Work in Action
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Stories of <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-orange-400">Hope</span>
+            Photo & Video <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-orange-400">Gallery</span>
           </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            A glimpse into our initiatives, campaigns, and the lives we touch.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {/* Videos */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: false }}
-            className="rounded-2xl overflow-hidden border border-border/50 shadow-2xl"
+            className="rounded-2xl overflow-hidden border border-border/50 shadow-2xl bg-black"
           >
             <video 
               src="/WhatsApp%20Video%202026-06-29%20at%206.42.47%20PM.mp4" 
@@ -434,10 +461,10 @@ function TestimonialsSection() {
             />
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: false }}
-            className="rounded-2xl overflow-hidden border border-border/50 shadow-2xl"
+            className="rounded-2xl overflow-hidden border border-border/50 shadow-2xl bg-black"
           >
             <video 
               src="/prince-story.mp4" 
@@ -445,6 +472,31 @@ function TestimonialsSection() {
               className="w-full aspect-video object-cover"
             />
           </motion.div>
+        </div>
+
+        {/* Photos Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          {images.map((src, index) => (
+            <motion.div
+              key={src}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ delay: index * 0.1 }}
+              className="relative aspect-square md:aspect-[4/3] overflow-hidden rounded-xl md:rounded-2xl border border-border/50 shadow-lg group bg-zinc-900"
+            >
+              <Image
+                src={src}
+                alt={`Gallery image ${index + 1}`}
+                fill
+                sizes="(max-width: 768px) 50vw, 33vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <Search className="w-8 h-8 text-white/80" />
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
@@ -557,49 +609,20 @@ function BlogSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
-            <motion.div
-              key={post.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <Card className="bg-card border-border overflow-hidden group hover:border-orange-500/30 transition-all">
-                <div className="relative overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    width={600}
-                    height={400}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-orange-500 text-foreground border-orange-500">
-                      {post.category}
-                    </Badge>
-                  </div>
-                </div>
-                <CardHeader>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                    <Calendar className="w-4 h-4" />
-                    {post.date}
-                  </div>
-                  <CardTitle className="text-lg text-foreground group-hover:text-orange-400 transition-colors">
-                    {post.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm mb-4">{post.excerpt}</p>
-                  <Button variant="link" className="text-orange-400 p-0 h-auto">
-                    Read More <ChevronRight className="w-4 h-4 ml-1" />
-                  </Button>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          className="rounded-3xl border border-border/50 bg-card/30 backdrop-blur-sm p-12 text-center max-w-3xl mx-auto flex flex-col items-center justify-center min-h-[300px]"
+        >
+          <div className="w-16 h-16 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-6">
+            <Sparkles className="w-8 h-8 text-orange-500" />
+          </div>
+          <h3 className="text-2xl font-bold text-foreground mb-3">Coming Soon</h3>
+          <p className="text-muted-foreground text-lg">
+            We are working on bringing you the latest stories, news, and insights from our work in the field. This section will be activated shortly!
+          </p>
+        </motion.div>
       </div>
     </section>
   );
@@ -620,12 +643,17 @@ function DonateCTA() {
         >
           <Heart className="w-16 h-16 text-white mx-auto mb-6 animate-pulse" />
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Your Support Can Change Lives
+            Your support helps us
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Every donation, no matter how small, makes a real difference in the lives of
-            underprivileged children and communities.
-          </p>
+          <div className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto text-left bg-black/20 p-6 md:p-8 rounded-3xl backdrop-blur-sm border border-white/10 shadow-2xl">
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3"><CheckCircle2 className="w-6 h-6 text-green-400 shrink-0" /> Reintegration of missing children back home</li>
+              <li className="flex items-center gap-3"><CheckCircle2 className="w-6 h-6 text-green-400 shrink-0" /> Investigating missing cases and field work</li>
+              <li className="flex items-center gap-3"><CheckCircle2 className="w-6 h-6 text-green-400 shrink-0" /> Travel assistance for the child and parents</li>
+              <li className="flex items-center gap-3"><CheckCircle2 className="w-6 h-6 text-green-400 shrink-0" /> Educational support for vulnerable girls</li>
+              <li className="flex items-center gap-3"><CheckCircle2 className="w-6 h-6 text-green-400 shrink-0" /> Conducting education and awareness campaigns</li>
+            </ul>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/donate">
               <Button
@@ -746,7 +774,7 @@ export default function Home() {
       <MissionSection />
       <ProgramsSection />
       <ImpactSection />
-      <TestimonialsSection />
+      <GallerySection />
       <TeamSection />
       <BlogSection />
       <DonateCTA />

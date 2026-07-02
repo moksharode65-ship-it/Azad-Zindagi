@@ -25,7 +25,7 @@ const VISION = {
 const MISSION = {
   title: "Mission",
   description:
-    "To mobilize communities, financial partners, and all segments of society towards ending human trafficking and creating new futures through community-based action.\n\nAzad Zindagi collaborates with law enforcement, government agencies, NGOs, and local bodies to strengthen prevention and restoration efforts. Azad Zindagi ensures holistic support and reintegration, upholding dignity and hope for survivors and the next generation.",
+    "To mobilize communities, financial partners, and all segments of society towards ending human trafficking and creating new futures through community-based action.",
   icon: Target,
   color: "green" as const,
 };
