@@ -68,6 +68,32 @@ export default function DonatePage() {
           <p className="text-zinc-400 max-w-xl mx-auto text-lg">
             We&apos;re using a simple UPI-only setup for now. Scan the code or copy the UPI ID below to donate securely.
           </p>
+
+          <div className="mt-8 max-w-xl mx-auto text-left bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+            <h3 className="text-lg font-semibold text-white mb-4">Your support helps us</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-3 text-zinc-300 text-sm">
+                <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                Reintegration of missing children back home
+              </li>
+              <li className="flex items-center gap-3 text-zinc-300 text-sm">
+                <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                Investigating missing cases and field work
+              </li>
+              <li className="flex items-center gap-3 text-zinc-300 text-sm">
+                <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                Travel assistance for the child and parents
+              </li>
+              <li className="flex items-center gap-3 text-zinc-300 text-sm">
+                <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                Educational support for vulnerable girls
+              </li>
+              <li className="flex items-center gap-3 text-zinc-300 text-sm">
+                <CheckCircle2 className="w-5 h-5 text-green-400 shrink-0" />
+                Conducting education and awareness campaigns
+              </li>
+            </ul>
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-5 gap-8 items-start">
