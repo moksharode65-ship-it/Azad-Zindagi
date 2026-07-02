@@ -29,30 +29,11 @@ import {
 } from "lucide-react";
 import HeroSection from "@/components/ui/glassmorphism-trust-hero";
 import OrbitSection from "@/components/ui/orbit-section";
-import { TestimonialCard } from "@/components/ui/testimonial-cards";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "@/components/theme-toggle";
-
-// Testimonials data
-const testimonials = [
-  {
-    id: 5,
-    testimonial: "Azad Foundation gave my children the education they deserve. Today, my daughter is the first in our family to go to college.",
-    author: "Priya Devi - Mother of two beneficiaries"
-  },
-  {
-    id: 8,
-    testimonial: "The skill training program changed my life. I now have a stable job and can support my entire family with dignity.",
-    author: "Rajesh Kumar - Program Graduate"
-  },
-  {
-    id: 12,
-    testimonial: "As a donor, I trust Azad Foundation completely. They are transparent, efficient, and truly make a difference.",
-    author: "Anita Sharma - Regular Donor since 2018"
-  }
-];
 
 
 
