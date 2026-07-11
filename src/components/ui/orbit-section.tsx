@@ -214,17 +214,15 @@ function DesktopOrbital({
 
   return (
     <div
-      className="relative w-full aspect-square max-w-[700px] mx-auto"
+      className="relative w-full aspect-square max-w-[550px] mx-auto"
       onClick={(e) => {
         if (e.target === e.currentTarget) setActiveItem(null);
       }}
     >
       {/* Outer orbit ring */}
-      <div className="absolute inset-0 rounded-full border border-dashed border-border/40 pointer-events-none" />
+      <div className="absolute inset-[10%] rounded-full border border-dashed border-border/40 pointer-events-none" />
       {/* Inner orbit ring */}
-      <div className="absolute inset-[22%] rounded-full border border-dashed border-border/30 pointer-events-none" />
-      {/* Innermost decorative ring */}
-      <div className="absolute inset-[38%] rounded-full border border-border/15 pointer-events-none" />
+      <div className="absolute inset-[30%] rounded-full border border-dashed border-border/30 pointer-events-none" />
 
       {/* Center Hub */}
       <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
@@ -247,7 +245,7 @@ function DesktopOrbital({
       {/* Inner orbit Nodes — Vision & Mission */}
       <div
         className="absolute -translate-x-1/2 -translate-y-1/2 z-20 transition-all duration-75"
-        style={getCoordinates(28, -90, rotationInner)}
+        style={getCoordinates(20, -90, rotationInner)}
       >
         <OrbitalNode
           title="Vision"
@@ -259,7 +257,7 @@ function DesktopOrbital({
       </div>
       <div
         className="absolute -translate-x-1/2 -translate-y-1/2 z-20 transition-all duration-75"
-        style={getCoordinates(28, 90, rotationInner)}
+        style={getCoordinates(20, 90, rotationInner)}
       >
         <OrbitalNode
           title="Mission"
@@ -279,7 +277,7 @@ function DesktopOrbital({
           <div
             key={key}
             className="absolute -translate-x-1/2 -translate-y-1/2 z-20 transition-all duration-75"
-            style={getCoordinates(50, initialAngle, rotationOuter)}
+            style={getCoordinates(40, initialAngle, rotationOuter)}
           >
             <OrbitalNode
               title={value.shortTitle}
