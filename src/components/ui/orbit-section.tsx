@@ -214,7 +214,7 @@ function DesktopOrbital({
 
   return (
     <div
-      className="relative w-full aspect-square max-w-[550px] mx-auto"
+      className="relative w-full aspect-square max-w-[620px] mx-auto"
       onClick={(e) => {
         if (e.target === e.currentTarget) setActiveItem(null);
       }}
