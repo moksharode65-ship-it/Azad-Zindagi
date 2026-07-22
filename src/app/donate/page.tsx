@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, Copy, Heart, ShieldCheck, Smartphone, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Copy, Heart, ShieldCheck, Smartphone, CheckCircle2, Landmark } from "lucide-react";
 
 const UPI_ID = "azadfoundation@upi";
 const PRESET_AMOUNTS = [500, 1000, 2000, 5000];
@@ -62,11 +62,11 @@ export default function DonatePage() {
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
             Donate by{" "}
             <span className="bg-gradient-to-r from-orange-400 to-green-400 bg-clip-text text-transparent">
-              Scanner or UPI ID
+              Scanner, UPI, or Bank Transfer
             </span>
           </h1>
           <p className="text-zinc-400 max-w-xl mx-auto text-lg">
-            We&apos;re using a simple UPI-only setup for now. Scan the code or copy the UPI ID below to donate securely.
+            Support our cause by donating securely via UPI scanner or direct bank transfer using the details below.
           </p>
 
           <div className="mt-8 max-w-xl mx-auto text-left bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
@@ -168,15 +168,18 @@ export default function DonatePage() {
                 </div>
 
                 <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                  <div className="flex items-center gap-3 mb-2">
+                  <div className="flex items-center gap-3 mb-3">
                     <div className="w-8 h-8 rounded bg-orange-500/20 text-orange-400 flex items-center justify-center">
-                      <ShieldCheck className="w-4 h-4" />
+                      <Landmark className="w-4 h-4" />
                     </div>
-                    <span className="text-sm font-medium text-white">Safety First</span>
+                    <span className="text-sm font-medium text-white">Bank Transfer</span>
                   </div>
-                  <p className="text-sm text-zinc-400">
-                    No bank details are shown on this page. Use the QR scanner or UPI ID to complete the donation.
-                  </p>
+                  <div className="space-y-1.5 text-sm text-zinc-300">
+                    <p><span className="text-zinc-500">Name:</span> Azad Zindagi Foundation</p>
+                    <p><span className="text-zinc-500">C/A:</span> 50200121687149</p>
+                    <p><span className="text-zinc-500">IFSC:</span> HDFC0010006</p>
+                    <p><span className="text-zinc-500">Branch:</span> Virar West</p>
+                  </div>
                 </div>
               </div>
             </div>
