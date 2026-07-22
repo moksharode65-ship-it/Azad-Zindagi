@@ -235,7 +235,7 @@ function AboutSection() {
               </p>
               
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                A collective of like-minded individuals from diverse fields united with a shared commitment to defend voiceless children. Guided by a strong child rights ethos, they work through targeted initiatives to safeguard every child&apos;s protection rights, promote safety, and ensure vulnerable children receive the care, dignity, and security they deserve.
+                A collective of like-minded individuals from diverse fields united with a shared commitment to defend voiceless children. Guided by a strong child rights ethos, we work through targeted initiatives to safeguard every child&apos;s protection rights, promote safety, and ensure vulnerable children receive the care, dignity, and security they deserve.
               </p>
               
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
