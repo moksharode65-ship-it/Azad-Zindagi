@@ -17,7 +17,7 @@ import {
 const VISION = {
   title: "Vision",
   description:
-    "To see trafficked and rescued missing children assisted, the vulnerable protected, captives set free, and the oppressed experiencing hope and healing as neighbours are transformed.",
+    "To see trafficked and missing children assisted, the vulnerable protected, captives set free, and the oppressed experiencing hope and healing as neighbours are transformed.",
   icon: Eye,
   color: "orange" as const,
 };
