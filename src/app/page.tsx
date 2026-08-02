@@ -121,14 +121,14 @@ const blogPosts = [
     title: "How Education Transforms Communities",
     excerpt: "Our education program has helped over 3,000 children access quality schooling...",
     date: "Apr 10, 2026",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fm=webp&fit=crop&w=600&q=75",
     category: "Education"
   },
   {
     title: "Child Safety: A Community Responsibility",
     excerpt: "Learn how communities can come together to protect children from harm...",
     date: "Apr 5, 2026",
-    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fm=webp&fit=crop&w=600&q=75",
     category: "Safety"
   }
 ];
@@ -171,7 +171,7 @@ function Navigation() {
             <ThemeToggle />
           </div>
 
-          <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle navigation menu">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -210,7 +210,7 @@ function AboutSection() {
       {/* Parallax Background */}
       <motion.div
         style={{ y, opacity }}
-        className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1920&q=80)] bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fm=webp&fit=crop&w=1200&q=75)] bg-cover bg-center opacity-20"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -380,7 +380,7 @@ function ImpactSection() {
     <section id="impact" className="relative py-24 bg-background overflow-hidden">
       <motion.div
         style={{ scale }}
-        className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1920&q=80)] bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fm=webp&fit=crop&w=1200&q=75)] bg-cover bg-center opacity-20"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -678,7 +678,7 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Quick Links</h4>
+            <h3 className="text-foreground font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#about" className="hover:text-foreground transition-colors">About Us</a></li>
               <li><a href="#programs" className="hover:text-foreground transition-colors">Programs</a></li>
@@ -689,7 +689,7 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Programs</h4>
+            <h3 className="text-foreground font-semibold mb-4 text-sm uppercase tracking-wider">Programs</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#" className="hover:text-foreground transition-colors">Child Safety</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Education</a></li>
@@ -699,7 +699,7 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Contact Us</h4>
+            <h3 className="text-foreground font-semibold mb-4 text-sm uppercase tracking-wider">Contact Us</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 text-orange-400 mt-0.5" />
@@ -722,10 +722,10 @@ function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-zinc-500 text-sm">
+          <p className="text-zinc-400 text-sm">
             © 2026 Azad Foundation. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-zinc-500">
+          <div className="flex gap-6 text-sm text-zinc-400">
             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-foreground transition-colors">80G Certificate</a>

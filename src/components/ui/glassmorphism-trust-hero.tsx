@@ -17,7 +17,7 @@ const PROTECTION_THREATS = [
 export default function HeroSection() {
   return (
     <div id="home" className="relative w-full bg-background text-foreground overflow-hidden font-sans min-h-screen transition-colors duration-500">
-      <div className="absolute inset-0 z-0 bg-[url(https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&q=80)] bg-cover bg-center opacity-15 dark:opacity-40" />
+      <div className="absolute inset-0 z-0 bg-[url(https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fm=webp&fit=crop&w=1200&q=75)] bg-cover bg-center opacity-15 dark:opacity-40" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background/95 dark:from-black/80 dark:via-black/50 dark:to-black/95" />
 
       <div className="relative z-20 bg-red-950/80 border-b border-red-400/30">
@@ -88,9 +88,9 @@ export default function HeroSection() {
                   <div className="flex items-center justify-center w-12 h-12 shrink-0 rounded-2xl bg-orange-500/10 text-orange-600 dark:text-orange-500 border border-orange-500/20 shadow-inner">
                     <Shield className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-foreground leading-tight">
+                  <h2 className="text-xl md:text-2xl font-semibold tracking-tight text-foreground leading-tight">
                     A CHILD HAS THE RIGHT TO BE <span className="text-orange-600 dark:text-orange-500">PROTECTED FROM</span>
-                  </h3>
+                  </h2>
                 </div>
                 
                 <div className="grid gap-3 sm:grid-cols-2">

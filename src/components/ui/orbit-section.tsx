@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Heart,
@@ -233,10 +234,13 @@ function DesktopOrbital({
           <div className="absolute inset-0 -m-4 rounded-full border border-orange-500/10 pulse-ring-delayed-2" />
 
           <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-background flex items-center justify-center pulse-glow overflow-hidden shadow-2xl z-10 border border-orange-500/20">
-            <img 
+            <Image 
               src="/logo-updated.png" 
               alt="Azad Zindagi Foundation Logo" 
+              width={112}
+              height={112}
               className="w-full h-full object-cover scale-110"
+              priority
             />
           </div>
         </div>
@@ -403,9 +407,9 @@ function MobileTimeline({
                   >
                     <Icon className={`w-5 h-5 ${iconColor}`} />
                   </div>
-                  <h4 className="text-lg font-bold text-foreground">
+                  <h3 className="text-lg font-bold text-foreground">
                     {item.title}
-                  </h4>
+                  </h3>
                 </div>
 
                 <AnimatePresence>
