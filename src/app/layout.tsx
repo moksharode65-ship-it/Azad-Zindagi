@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Azad Zindagi Foundation - Protecting Children and Ending Trafficking",
   description: "Azad Zindagi Foundation is a Section 8 company in Maharashtra working for rescued, missing, and trafficked children through tracing, awareness, education, and community action.",
   keywords: "Azad Zindagi Foundation, child protection, trafficking, missing children, POCSO, Section 8 company, Maharashtra, education, awareness",
+  verification: {
+    google: "L-d3cn7MrKsycYxpIroo1yBBYx7T8mGy6oSGKg7Xeus",
+  },
 };
 
 export default function RootLayout({
