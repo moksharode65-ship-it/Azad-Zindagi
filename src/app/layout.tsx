@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Azad Zindagi Foundation",
     description: "Working for rescued, missing, and trafficked children through tracing, awareness, education, and community action in Maharashtra.",
-    url: "https://azad-zindagi.vercel.app",
+    url: "https://azadzindagifoundation.org",
     siteName: "Azad Zindagi Foundation",
     images: [
       {
