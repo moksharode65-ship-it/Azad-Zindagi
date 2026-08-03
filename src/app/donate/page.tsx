@@ -6,7 +6,7 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, Copy, Heart, ShieldCheck, Smartphone, CheckCircle2, Landmark } from "lucide-react";
 
-const UPI_ID = "azadfoundation@upi";
+const UPI_ID = "Vyapar.175694275498@hdfcbank";
 const PRESET_AMOUNTS = [500, 1000, 2000, 5000];
 
 export default function DonatePage() {
@@ -195,8 +195,8 @@ export default function DonatePage() {
               <h3 className="text-sm font-semibold text-orange-300 uppercase tracking-wider mb-4">Scanner</h3>
               <div className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-white p-4">
                 <Image
-                  src="/logo-updated.png"
-                  alt="Donation scanner"
+                  src="/qr-code.png"
+                  alt="HDFC SmartHub Vyapar QR Code - Azad Zindagi Foundation"
                   width={800}
                   height={800}
                   className="h-auto w-full rounded-xl object-contain"
