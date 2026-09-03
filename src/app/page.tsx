@@ -424,7 +424,7 @@ function ImpactSection() {
 
 // Photo & Video Gallery Section
 function GallerySection() {
-  const images = Array.from({ length: 9 }, (_, i) => `/gallery/gallery-${i + 1}.jpeg`);
+  const images = Array.from({ length: 18 }, (_, i) => `/gallery/gallery-${i + 1}.jpeg`);
   
   return (
     <section className="py-24 bg-background overflow-hidden">
